@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"><title>AI Agent 框架三国杀</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { width:1280px; height:720px; overflow:hidden; font-family:'Segoe UI',system-ui,sans-serif; position:relative; }
+.nav { position:absolute; top:0; height:100%; width:50%; z-index:10; cursor:pointer; }
+.nav.left { left:0; } .nav.right { right:0; }
+.nav:hover { background:rgba(255,255,255,0.03); }
+.footer { position:absolute; bottom:16px; width:100%; display:flex; justify-content:space-between; padding:0 40px; font-size:12px; color:#888; z-index:5; }
+.page-num { position:absolute; bottom:16px; right:40px; font-size:12px; color:#888; z-index:5; }
+h1 { font-size:48px; font-weight:700; }
+h2 { font-size:36px; font-weight:600; margin-bottom:24px; }
+h3 { font-size:20px; font-weight:600; margin:16px 0 8px; color:#2563eb; }
+p, li { font-size:17px; line-height:1.7; color:#374151; }
+ul { padding-left:24px; }
+li { margin:6px 0; }
+.badge { display:inline-block; padding:4px 14px; border-radius:20px; font-size:13px; font-weight:600; margin:0 4px; }
+.badge-lc { background:#1c3d1c; color:#4ade80; }
+.badge-va { background:#1e1b4b; color:#a78bfa; }
+.badge-ms { background:#0f172a; color:#38bdf8; }
+.card { background:white; border-radius:16px; padding:24px; box-shadow:0 1px 3px rgba(0,0,0,0.08); margin-bottom:16px; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.grid3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; }
+.highlight { color:#2563eb; font-weight:600; }
+table { width:100%; border-collapse:collapse; font-size:14px; margin-top:12px; }
+th { background:#f8fafc; padding:10px 12px; text-align:left; font-weight:600; border-bottom:2px solid #e2e8f0; }
+td { padding:8px 12px; border-bottom:1px solid #f1f5f9; }
+tr:hover td { background:#f8fafc; }
+.tag { display:inline-block; padding:2px 10px; border-radius:12px; font-size:12px; font-weight:600; }
+.tag-green { background:#dcfce7; color:#166534; }
+.tag-red { background:#fee2e2; color:#991b1b; }
+.tag-yellow { background:#fef9c3; color:#854d0e; }
+.tag-blue { background:#dbeafe; color:#1e40af; }
+</style></head><body>
+
+<div style="padding:56px 60px;height:100%;background:#f8fafc;">
+<h2 style="color:#0f172a;">Workflow 引擎 — 最大分歧点</h2>
+<table>
+<tr><th>特性</th><th>LangChain/LangGraph</th><th>VoltAgent</th><th>Mastra</th></tr>
+<tr><td>模型</td><td>有向图 StateGraph</td><td>声明式链式 API</td><td>图式 createStep/createWorkflow</td></tr>
+<tr><td>条件分支</td><td>conditional_edges</td><td>.andWhen / .andBranch</td><td>.branch(cond, t, f)</td></tr>
+<tr><td>并行</td><td>Send API</td><td>.andAll / .andRace</td><td>.parallel()</td></tr>
+<tr><td>挂起/恢复</td><td>interrupt()</td><td>suspend/resume</td><td>.suspend()</td></tr>
+<tr><td><span class="highlight">时间旅行</span></td><td><span class="tag tag-red">❌</span></td><td><span class="tag tag-red">❌</span></td><td><span class="tag tag-green">✅ Studio</span></td></tr>
+<tr><td>LLM 调用</td><td>ToolNode</td><td><span class="highlight">andAgent() 专用</span></td><td>step 内调用 agent</td></tr>
+<tr><td>Schema</td><td>TypedDict</td><td>Zod（为主）</td><td>Zod/Valibot/ArkType</td></tr>
+<tr><td>循环回边</td><td><span class="tag tag-green">✅</span></td><td><span class="tag tag-red">❌</span></td><td><span class="tag tag-red">❌</span></td></tr>
+</table>
+<div style="margin-top:20px;display:flex;gap:16px;">
+<div style="flex:1;background:#f0fdf4;border-radius:12px;padding:16px;"><strong>最灵活：</strong>LangGraph 有向图</div>
+<div style="flex:1;background:#eef2ff;border-radius:12px;padding:16px;"><strong>最简洁：</strong>VoltAgent 链式声明</div>
+<div style="flex:1;background:#f0f9ff;border-radius:12px;padding:16px;"><strong>最工程化：</strong>Mastra Step 组件化</div>
+</div></div>
+
+<div class="footer"><span>AI Agent Framework Showdown 2026</span></div>
+<div class="page-num">7 / 14</div>
+<a href="slide_06.html" class="nav left"></a><a href="slide_08.html" class="nav right"></a>
+<script>document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')window.location='slide_08.html';if(e.key==='ArrowLeft')window.location='slide_06.html';})</script>
+</body></html>

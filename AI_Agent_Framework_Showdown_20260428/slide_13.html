@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"><title>AI Agent 框架三国杀</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { width:1280px; height:720px; overflow:hidden; font-family:'Segoe UI',system-ui,sans-serif; position:relative; }
+.nav { position:absolute; top:0; height:100%; width:50%; z-index:10; cursor:pointer; }
+.nav.left { left:0; } .nav.right { right:0; }
+.nav:hover { background:rgba(255,255,255,0.03); }
+.footer { position:absolute; bottom:16px; width:100%; display:flex; justify-content:space-between; padding:0 40px; font-size:12px; color:#888; z-index:5; }
+.page-num { position:absolute; bottom:16px; right:40px; font-size:12px; color:#888; z-index:5; }
+h1 { font-size:48px; font-weight:700; }
+h2 { font-size:36px; font-weight:600; margin-bottom:24px; }
+h3 { font-size:20px; font-weight:600; margin:16px 0 8px; color:#2563eb; }
+p, li { font-size:17px; line-height:1.7; color:#374151; }
+ul { padding-left:24px; }
+li { margin:6px 0; }
+.badge { display:inline-block; padding:4px 14px; border-radius:20px; font-size:13px; font-weight:600; margin:0 4px; }
+.badge-lc { background:#1c3d1c; color:#4ade80; }
+.badge-va { background:#1e1b4b; color:#a78bfa; }
+.badge-ms { background:#0f172a; color:#38bdf8; }
+.card { background:white; border-radius:16px; padding:24px; box-shadow:0 1px 3px rgba(0,0,0,0.08); margin-bottom:16px; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.grid3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; }
+.highlight { color:#2563eb; font-weight:600; }
+table { width:100%; border-collapse:collapse; font-size:14px; margin-top:12px; }
+th { background:#f8fafc; padding:10px 12px; text-align:left; font-weight:600; border-bottom:2px solid #e2e8f0; }
+td { padding:8px 12px; border-bottom:1px solid #f1f5f9; }
+tr:hover td { background:#f8fafc; }
+.tag { display:inline-block; padding:2px 10px; border-radius:12px; font-size:12px; font-weight:600; }
+.tag-green { background:#dcfce7; color:#166534; }
+.tag-red { background:#fee2e2; color:#991b1b; }
+.tag-yellow { background:#fef9c3; color:#854d0e; }
+.tag-blue { background:#dbeafe; color:#1e40af; }
+</style></head><body>
+
+<div style="padding:56px 60px;height:100%;background:#f8fafc;">
+<h2 style="color:#0f172a;">战争态势图</h2>
+<div style="display:flex;justify-content:center;align-items:center;height:70%;">
+<div style="text-align:center;">
+<div style="font-size:18px;color:#6b7280;margin-bottom:4px;">Python 生态 ← → TypeScript 生态</div>
+<div style="position:relative;width:600px;height:400px;margin:0 auto;">
+<!-- LangChain -->
+<div style="position:absolute;top:0;left:50%;transform:translateX(-50%);text-align:center;">
+<div style="background:#166534;color:#4ade80;padding:20px 40px;border-radius:16px;font-size:20px;font-weight:700;">🔗 LangChain<br>LangGraph</div>
+<div style="color:#6b7280;font-size:13px;margin-top:4px;">500+ 集成 · Python 生态之王</div>
+</div>
+<!-- lines -->
+<div style="position:absolute;top:90px;left:50%;width:2px;height:40px;background:#cbd5e1;"></div>
+<div style="position:absolute;top:130px;left:160px;width:280px;height:2px;background:#cbd5e1;"></div>
+<div style="position:absolute;top:130px;left:160px;width:2px;height:40px;background:#cbd5e1;"></div>
+<div style="position:absolute;top:130px;right:160px;width:2px;height:40px;background:#cbd5e1;"></div>
+<!-- VoltAgent -->
+<div style="position:absolute;bottom:60px;left:100px;text-align:center;">
+<div style="background:#312e81;color:#a78bfa;padding:16px 28px;border-radius:12px;font-size:16px;font-weight:600;">🏭 VoltAgent<br><span style="font-size:12px;">平台优先 · MCP+A2A</span></div>
+</div>
+<!-- Mastra -->
+<div style="position:absolute;bottom:60px;right:100px;text-align:center;">
+<div style="background:#0f3450;color:#38bdf8;padding:16px 28px;border-radius:12px;font-size:16px;font-weight:600;">🏠 Mastra<br><span style="font-size:12px;">前端优先 · 22k⭐ · Apache 2.0</span></div>
+</div>
+</div>
+<div style="margin-top:16px;font-size:14px;color:#64748b;">TypeScript Agent 框架的两条路线：<b>平台化 vs 全栈化</b></div>
+</div></div></div>
+
+<div class="footer"><span>AI Agent Framework Showdown 2026</span></div>
+<div class="page-num">13 / 14</div>
+<a href="slide_12.html" class="nav left"></a><a href="slide_14.html" class="nav right"></a>
+<script>document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')window.location='slide_14.html';if(e.key==='ArrowLeft')window.location='slide_12.html';})</script>
+</body></html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"><title>AI Agent 框架三国杀</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { width:1280px; height:720px; overflow:hidden; font-family:'Segoe UI',system-ui,sans-serif; position:relative; }
+.nav { position:absolute; top:0; height:100%; width:50%; z-index:10; cursor:pointer; }
+.nav.left { left:0; } .nav.right { right:0; }
+.nav:hover { background:rgba(255,255,255,0.03); }
+.footer { position:absolute; bottom:16px; width:100%; display:flex; justify-content:space-between; padding:0 40px; font-size:12px; color:#888; z-index:5; }
+.page-num { position:absolute; bottom:16px; right:40px; font-size:12px; color:#888; z-index:5; }
+h1 { font-size:48px; font-weight:700; }
+h2 { font-size:36px; font-weight:600; margin-bottom:24px; }
+h3 { font-size:20px; font-weight:600; margin:16px 0 8px; color:#2563eb; }
+p, li { font-size:17px; line-height:1.7; color:#374151; }
+ul { padding-left:24px; }
+li { margin:6px 0; }
+.badge { display:inline-block; padding:4px 14px; border-radius:20px; font-size:13px; font-weight:600; margin:0 4px; }
+.badge-lc { background:#1c3d1c; color:#4ade80; }
+.badge-va { background:#1e1b4b; color:#a78bfa; }
+.badge-ms { background:#0f172a; color:#38bdf8; }
+.card { background:white; border-radius:16px; padding:24px; box-shadow:0 1px 3px rgba(0,0,0,0.08); margin-bottom:16px; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.grid3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; }
+.highlight { color:#2563eb; font-weight:600; }
+table { width:100%; border-collapse:collapse; font-size:14px; margin-top:12px; }
+th { background:#f8fafc; padding:10px 12px; text-align:left; font-weight:600; border-bottom:2px solid #e2e8f0; }
+td { padding:8px 12px; border-bottom:1px solid #f1f5f9; }
+tr:hover td { background:#f8fafc; }
+.tag { display:inline-block; padding:2px 10px; border-radius:12px; font-size:12px; font-weight:600; }
+.tag-green { background:#dcfce7; color:#166534; }
+.tag-red { background:#fee2e2; color:#991b1b; }
+.tag-yellow { background:#fef9c3; color:#854d0e; }
+.tag-blue { background:#dbeafe; color:#1e40af; }
+</style></head><body>
+
+<div style="padding:56px 60px;height:100%;background:#f8fafc;">
+<h2 style="color:#0f172a;">🏠 Mastra</h2>
+<div class="grid2">
+<div><h3>独特优势</h3><ul>
+<li><span class="highlight">Observational Memory</span> — 后台 Agent 压缩长对话</li>
+<li>Composite Store — domain 路由 OLTP/OLAP</li>
+<li>Studio <span class="highlight">时间旅行</span>调试</li>
+<li>Vercel/CF/Netlify 官方 deployer</li>
+<li>Apache 2.0 全开源 + 任意 OTLP 导出</li>
+<li>40+ 示例项目，npx create mastra</li>
+</ul></div>
+<div><h3>杀手功能：Observational Memory</h3>
+<div style="background:#0f3450;border-radius:12px;padding:20px;color:#bae6fd;font-family:monospace;font-size:13px;line-height:1.6;">
+<span style="color:#38bdf8;">memory</span>: <span style="color:#a78bfa;">new</span> <span style="color:#7dd3fc;">Memory</span>({<br>
+&nbsp;&nbsp;options: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fbbf24;">observationalMemory</span>: <span style="color:#34d399;">true</span>,<br>
+&nbsp;&nbsp;}<br>
+})<br><br>
+<span style="color:#94a3b8;">// 后台 Agent 将旧消息压缩为</span><br>
+<span style="color:#94a3b8;">// 密集观察日志，避免上下文溢出</span>
+</div></div></div>
+<div style="margin-top:20px;padding:16px;background:white;border-radius:12px;text-align:center;">
+<p><span style="font-weight:700;color:#0284c7;">22k+</span> GitHub Stars · <span style="font-weight:700;color:#0284c7;">300k+</span> 周下载 · YC W25 · $13M 融资</p>
+</div></div>
+
+<div class="footer"><span>AI Agent Framework Showdown 2026</span></div>
+<div class="page-num">5 / 14</div>
+<a href="slide_04.html" class="nav left"></a><a href="slide_06.html" class="nav right"></a>
+<script>document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')window.location='slide_06.html';if(e.key==='ArrowLeft')window.location='slide_04.html';})</script>
+</body></html>
